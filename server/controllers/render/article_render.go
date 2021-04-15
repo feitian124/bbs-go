@@ -2,9 +2,9 @@ package render
 
 import (
 	"bbs-go/cache"
-	"bbs-go/common/markdown"
 	"bbs-go/model"
 	"bbs-go/model/constants"
+	"bbs-go/package/markdown"
 	"github.com/mlogclub/simple"
 )
 

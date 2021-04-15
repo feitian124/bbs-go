@@ -1,9 +1,9 @@
 package render
 
 import (
-	"bbs-go/common/markdown"
 	"bbs-go/model"
 	"bbs-go/model/constants"
+	"bbs-go/package/markdown"
 	"bbs-go/services"
 	"github.com/mlogclub/simple"
 	"github.com/mlogclub/simple/json"
@@ -15,7 +15,7 @@ func BuildTopic(topic *model.Topic) *model.TopicResponse {
 }
 
 func BuildSimpleTopic(topic *model.Topic) *model.TopicResponse {
-	buildContent:= topic.Type == constants.TopicTypeTweet // 动态时渲染内容
+	buildContent := topic.Type == constants.TopicTypeTweet // 动态时渲染内容
 	return _buildTopic(topic, buildContent)
 }
 

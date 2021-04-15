@@ -1,7 +1,7 @@
 package markdown
 
 import (
-	"bbs-go/common/html"
+	"bbs-go/package/html"
 	"github.com/88250/lute"
 	"github.com/mlogclub/simple"
 	"sync"

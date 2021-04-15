@@ -1,11 +1,11 @@
 package render
 
 import (
-	"bbs-go/common"
-	html2 "bbs-go/common/html"
-	"bbs-go/common/markdown"
 	"bbs-go/model"
 	"bbs-go/model/constants"
+	"bbs-go/package/common"
+	"bbs-go/package/html"
+	"bbs-go/package/markdown"
 	"github.com/mlogclub/simple"
 )
 
@@ -29,7 +29,7 @@ func BuildProject(project *model.Project) *model.ProjectResponse {
 		rsp.Summary = simple.GetSummary(simple.GetHtmlText(project.Content), constants.SummaryLen)
 	} else {
 		content := markdown.ToHTML(project.Content)
-		summary := html2.GetSummary(content, constants.SummaryLen)
+		summary := html.GetSummary(content, constants.SummaryLen)
 		rsp.Content = handleHtmlContent(content)
 		rsp.Summary = summary
 	}

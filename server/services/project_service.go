@@ -2,6 +2,8 @@ package services
 
 import (
 	"bbs-go/model/constants"
+	"bbs-go/package/config"
+	"bbs-go/package/urls"
 	"github.com/mlogclub/simple/date"
 	"math"
 	"path"
@@ -12,10 +14,8 @@ import (
 	"github.com/sirupsen/logrus"
 
 	"bbs-go/cache"
-	"bbs-go/common"
-	"bbs-go/common/urls"
-	"bbs-go/config"
 	"bbs-go/model"
+	"bbs-go/package/common"
 	"bbs-go/repositories"
 )
 

@@ -1,12 +1,11 @@
 package api
 
 import (
+	"bbs-go/package/urls"
 	"github.com/dchest/captcha"
 	"github.com/kataras/iris/v12"
 	"github.com/mlogclub/simple"
 	"github.com/sirupsen/logrus"
-
-	"bbs-go/common/urls"
 )
 
 type CaptchaController struct {

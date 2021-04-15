@@ -1,12 +1,12 @@
 package render
 
 import (
+	"bbs-go/package/urls"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/mlogclub/simple"
 
-	"bbs-go/common/urls"
 	"bbs-go/model"
 	"bbs-go/services"
 )

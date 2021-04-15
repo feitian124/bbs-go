@@ -1,9 +1,9 @@
 package render
 
 import (
-	"bbs-go/common/markdown"
 	"bbs-go/model"
 	"bbs-go/model/constants"
+	"bbs-go/package/markdown"
 	"bbs-go/services"
 	"html"
 )

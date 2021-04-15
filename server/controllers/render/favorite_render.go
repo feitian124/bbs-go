@@ -1,10 +1,10 @@
 package render
 
 import (
-	"bbs-go/common"
-	"bbs-go/common/urls"
 	"bbs-go/model"
 	"bbs-go/model/constants"
+	"bbs-go/package/common"
+	"bbs-go/package/urls"
 	"bbs-go/services"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/mlogclub/simple"

@@ -1,10 +1,10 @@
 package common
 
 import (
-	"bbs-go/common/html"
-	"bbs-go/common/markdown"
-	"bbs-go/config"
 	"bbs-go/model/constants"
+	"bbs-go/package/config"
+	"bbs-go/package/html"
+	"bbs-go/package/markdown"
 	"github.com/mlogclub/simple"
 	"math/rand"
 	"strconv"

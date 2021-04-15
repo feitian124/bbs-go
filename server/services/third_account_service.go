@@ -2,6 +2,8 @@ package services
 
 import (
 	"bbs-go/model/constants"
+	"bbs-go/package/github"
+	"bbs-go/package/qq"
 	"database/sql"
 	"github.com/mlogclub/simple/date"
 	"github.com/mlogclub/simple/json"
@@ -10,8 +12,6 @@ import (
 
 	"github.com/mlogclub/simple"
 
-	"bbs-go/common/github"
-	"bbs-go/common/qq"
 	"bbs-go/model"
 	"bbs-go/repositories"
 )

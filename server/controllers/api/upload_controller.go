@@ -1,13 +1,13 @@
 package api
 
 import (
+	"bbs-go/package/uploader"
 	"io/ioutil"
 
 	"github.com/kataras/iris/v12"
 	"github.com/mlogclub/simple"
 	"github.com/sirupsen/logrus"
 
-	"bbs-go/common/uploader"
 	"bbs-go/services"
 )
 

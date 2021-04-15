@@ -2,6 +2,7 @@ package api
 
 import (
 	"bbs-go/model/constants"
+	"bbs-go/package/urls"
 	"math/rand"
 	"strconv"
 
@@ -9,7 +10,6 @@ import (
 	"github.com/mlogclub/simple"
 
 	"bbs-go/cache"
-	"bbs-go/common/urls"
 	"bbs-go/controllers/render"
 	"bbs-go/model"
 	"bbs-go/services"

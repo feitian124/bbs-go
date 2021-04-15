@@ -2,11 +2,11 @@ package collect
 
 import (
 	"bbs-go/model/constants"
+	"bbs-go/package/uploader"
 	"errors"
 	"github.com/mlogclub/simple/date"
 	"strings"
 
-	"bbs-go/common/uploader"
 	"bbs-go/services"
 
 	"github.com/mlogclub/simple"

@@ -1,11 +1,12 @@
 package services
 
 import (
-	"bbs-go/common"
-	"bbs-go/common/email"
-	"bbs-go/common/urls"
-	"bbs-go/common/validate"
 	"bbs-go/model/constants"
+	"bbs-go/package/common"
+	"bbs-go/package/email"
+	"bbs-go/package/uploader"
+	"bbs-go/package/urls"
+	"bbs-go/package/validate"
 	"database/sql"
 	"errors"
 	"github.com/mlogclub/simple"
@@ -19,7 +20,6 @@ import (
 	"time"
 
 	"bbs-go/cache"
-	"bbs-go/common/uploader"
 
 	"bbs-go/model"
 	"bbs-go/repositories"

@@ -2,6 +2,8 @@ package sitemap
 
 import (
 	"bbs-go/model/constants"
+	"bbs-go/package/uploader"
+	"bbs-go/package/urls"
 	"bytes"
 	"compress/gzip"
 	"github.com/mlogclub/simple/date"
@@ -11,10 +13,8 @@ import (
 	"github.com/ikeikeikeike/go-sitemap-generator/v2/stm"
 	"github.com/sirupsen/logrus"
 
-	"bbs-go/common/uploader"
-	"bbs-go/common/urls"
-	"bbs-go/config"
 	"bbs-go/model"
+	"bbs-go/package/config"
 	"bbs-go/services"
 )
 
@@ -45,13 +45,13 @@ func Generate() {
 	}()
 
 	sm := stm.NewSitemap(0)
-	sm.SetDefaultHost(config.Instance.BaseUrl)                  // 网站host
+	sm.SetDefaultHost(config.Instance.BaseUrl) // 网站host
 	if uploader.IsEnabledOss() {
 		sm.SetSitemapsHost(config.Instance.Uploader.AliyunOss.Host) // 上传到阿里云所以host设置为阿里云
-	}else{
+	} else {
 		sm.SetPublicPath(config.Instance.Uploader.Local.Host)
 	}
-	sm.SetSitemapsPath("sitemap2")                              // sitemap存放目录
+	sm.SetSitemapsPath("sitemap2") // sitemap存放目录
 	sm.SetVerbose(false)
 	sm.SetPretty(false)
 	sm.SetCompress(true)

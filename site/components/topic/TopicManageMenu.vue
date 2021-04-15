@@ -4,14 +4,18 @@
       管理<i class="el-icon-arrow-down el-icon--right"></i>
     </span>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item v-if="topic.type === 0" command="edit"
+      <el-dropdown-item v-if="isOwner && topic.type === 0" command="edit"
         >修改</el-dropdown-item
       >
-      <el-dropdown-item command="recommend">{{
+      <el-dropdown-item v-if="isOwner || isAdmin" command="recommend">{{
         topic.recommend ? '取消推荐' : '推荐'
       }}</el-dropdown-item>
-      <el-dropdown-item command="delete">删除</el-dropdown-item>
-      <el-dropdown-item command="forbidden7Days">禁言7天</el-dropdown-item>
+      <el-dropdown-item v-if="isTopicOwner" command="delete"
+        >删除</el-dropdown-item
+      >
+      <el-dropdown-item v-if="isOwner || isAdmin" command="forbidden7Days"
+        >禁言7天</el-dropdown-item
+      >
       <el-dropdown-item v-if="isOwner" command="forbiddenForever"
         >永久禁言</el-dropdown-item
       >
@@ -46,6 +50,9 @@ export default {
     isOwner() {
       return UserHelper.isOwner(this.user)
     },
+    isAdmin() {
+      return UserHelper.isAdmin(this.user)
+    },
     user() {
       return this.$store.state.user.current
     },
@@ -72,7 +79,7 @@ export default {
     async forbidden(days) {
       try {
         await this.$axios.post('/api/user/forbidden', {
-          userId: this.topic.userId,
+          userId: this.topic.user.id,
           days,
         })
         this.$message.success('禁言成功')

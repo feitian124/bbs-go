@@ -1,8 +1,11 @@
 package services
 
 import (
-	"bbs-go/es"
 	"bbs-go/model/constants"
+	"bbs-go/package/config"
+	"bbs-go/package/es"
+	"bbs-go/package/seo"
+	"bbs-go/package/urls"
 	"errors"
 	"github.com/mlogclub/simple/date"
 	"github.com/mlogclub/simple/json"
@@ -17,11 +20,8 @@ import (
 	"gorm.io/gorm"
 
 	"bbs-go/cache"
-	"bbs-go/common"
-	"bbs-go/common/seo"
-	"bbs-go/common/urls"
-	"bbs-go/config"
 	"bbs-go/model"
+	"bbs-go/package/common"
 	"bbs-go/repositories"
 )
 
